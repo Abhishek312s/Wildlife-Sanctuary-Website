@@ -121,7 +121,7 @@ body {
     url(./imgs/david-clode-nyvR6wbU1ho-unsplash.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top right;
+  background-attachment: fixed;
 }
 
 .showcase-container {
@@ -309,8 +309,8 @@ footer h2 {
   }
   .navbar-container .hamburger-lines {
     display: block;
-    height: 32px;
-    width: 40px;
+    height: 25px;
+    width: 35px;
     position: absolute;
     top: 20px;
     left: 20px;
@@ -373,13 +373,13 @@ footer h2 {
     transform: translateX(0%);
   }
   .navbar input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
-    transform: rotate(45deg);
+    transform: rotate(40deg);
   }
   .navbar input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
     transform: scaleY(0);
   }
   .navbar input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
-    transform: rotate(-45deg);
+    transform: rotate(-40deg);
   }
 
   .img-container {
