@@ -50,8 +50,6 @@ body {
   margin-top: 1em;
   text-transform: uppercase;
   font: 500;
-  outline: none;
-
 }
 .btn-primary {
   color: #fff;
@@ -166,35 +164,15 @@ body {
 .about-img {
   flex: 1 1 400px;
   padding: 30px;
-  animation-name: about-img-ani;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-  transform: translateX(200%);
 }
 
-@keyframes about-img-ani {
-  100% {
-    transform: translate(0);
-  }
-}
 
 .about-text {
   flex: 1 1 400px;
   padding: 30px;
   margin: auto;
-  animation-name: about-text-ani;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-  transform: translateX(-200%);
 }
 
-@keyframes about-text-ani {
-  100% {
-    transform: translate(0);
-  }
-}
 .about-img img {
   display: block;
   height: 400px;
@@ -202,6 +180,7 @@ body {
   object-fit: cover;
   margin: auto;
   object-position: right;
+  border-radius: 5px;
 }
 
 /* ##################### .contact-us ################### */
@@ -282,6 +261,35 @@ footer h2 {
   text-align: center;
   font-size: 1.6rem;
 }
+
+/* float btn */
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99; 
+  border: none; 
+  outline: none; 
+  transition: all 0.4s ease-in-out;
+  background-color: #168ba0;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+#myBtn:hover {
+  background-color:#0e6a7a;
+}
+i{
+  transition: all 0.4s ease-in-out;
+}
+
+#myBtn:hover i{
+  transform: rotate(360deg);
+}
+
 
 /* ############# media queries ############### */
 
@@ -387,12 +395,14 @@ footer h2 {
   }
 }
 
+  
+
 /* ########### small screen ############ */
 @media (max-width: 500px) {
   html {
     font-size: 50%;
   }
-  .form-container {
+  .form-container{
     width: 90%;
   }
   .contact-container {
@@ -403,7 +413,17 @@ footer h2 {
     width: 90%;
     margin: 3rem auto;
   }
+
+  .main-title{
+    font-size: 4.5rem;
+  }
+  
+  .main-title ~p{
+    font-size: 2.1rem;
+  }
 }
+
+
 
 /* ######## landscape mode ########### */
 
