@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Work-Bordehi Wildlife</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./explore.css">
 </head>
+
 <body>
     <nav class="navbar">
         <div class="navbar-container container">
@@ -38,11 +42,13 @@
     </nav>
 
     <section class="video-area">
-            <video id="myvid" poster="https://images.pexels.com/photos/2926038/pexels-photo-2926038.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" autoplay muted loop>
-                <source src="./videos/wild_Trim.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-             
-        </div>
+        <video id="myvid"
+            poster="./imgs/tiger.jpg"
+            autoplay muted loop>
+            <source src="./videos/wild_Trim.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+
+            </div>
 
     </section>
 
@@ -51,10 +57,10 @@
 
             <ul class="menu-items sticky-container">
                 <li>
-                    <a href="">Overview <i class="fa-solid fa-paw"></i></a>
+                    <a href="#overview">Overview <i class="fa-solid fa-paw"></i></a>
                 </li>
                 <li>
-                    <a href="">Why It Matters <i class="fa-solid fa-question"></i></a>
+                    <a href="#matters">Why It Matters <i class="fa-solid fa-question"></i></a>
                 </li>
                 <li>
                     <a href="">What We Are Doing <i class="fa-solid fa-hand-fist"></i></a>
@@ -67,11 +73,155 @@
         </div>
     </nav>
 
-   <section class="overview" id="overview">
-    <div class="overview-container">
-        
+    <section class="overview" id="overview">
+        <div class="overview-container container">
+            <div class="overview-text">
+                <span>Overview</span>
+                <p>Saving nature is at the very heart of what we do as Bordehi Wildlife. For 60 years, we have made it
+                    our mission to find solutions that save the marvelous array of life on our planet by applying the
+                    best science available and working closely with local communities.
+                    <br> <br>
+                    But our work is far from done. Humans are behind the current rate of species extinction, which is at
+                    least 100–1,000 times higher than nature intended. We’ve seen an astonishing 60% decline in the size
+                    of populations of mammals, birds, fish, reptiles, and amphibians in just over 40 years, according to
+                    WWF's Living Planet Report 2018.
+                    <br><br>
+                    And the impacts will reach far beyond the potential cultural loss of iconic species like tigers,
+                    rhinos and whales.
+                    <br><br>
+                    The good news is we’ve also seen what’s working. Bordehi Wildlife has been part of successful
+                    wildlife recovery stories ranging from southern Africa’s black rhino to Red Panda in India. And
+                    this, in turn, is helping to protect rich and varied ecosystems while ensuring people continue to
+                    benefit from nature.
+                    <br><br>
+                    This much is clear: we cannot afford to fail in our mission to save a living planet.
+                </p>
+            </div>
+            <div class="overview-img">
+                <img src="./imgs/monkey.jpg" alt="monkey photograph">
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="overview question">
+        <div class="overview-container container">
+            <div class="overview-img">
+                <img src="./imgs/bird.jpg" alt="monkey photograph">
+            </div>
+            <div class="overview-text">
+                <span>Species on the brink</span>
+                <p>Almost 8,000 species of fish, amphibian, reptile, mammal and bird are officially categorised as globally threatened, and over 9,600 tree species are in danger of extinction.
+                </p>
+            </div>
+            
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- Slideshow container -->
+    <section class="matters" id="matters">
+
+        <h2>Why It Matters?</h2>
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="./imgs/bearthrive.jpg">
+      <div class="text">
+          <h3>HELPING POPULATIONS THRIVE</h3>
+          <p>It speaks to the power of the mighty predator that the first-ever global summit on a single species brought together world leaders to commit to a single purpose—doubling the number of wild tigers by 2022.</p>
+      </div>
     </div>
-   </section>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="./imgs/owlplanet.jpg">
+      <div class="text">
+        <h3>SAVING A PLANET OF LIFE</h3>
+        <p>We protect wildlife for many reasons. It is a source of inspiration. It nurtures a sense of wonder. It is integral to the balance of nature.</p>
+    </div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="./imgs/tigersave.jpg">
+      <div class="text">
+        <h3>Protecting Ecological Stability and Balance</h3>
+        <p>If animal species become dominant whether it is humans or wildlife, it will cause a lot of instability affecting the survival of all plant and animal species in the world.</p>
+    </div>
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+</section>
+
+<footer id="footer">
+    <div class="container">
+        <h2>Bordehi Wildlife Sanctuary &copy; 2022, all rights reserved. <br>Made with &hearts; by Abhishek & Aditya </h2>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to Top"><i class='fas fa-angle-up'></i></button>
+</footer>
+<script src="./functionality.js"></script>
+
+
+
+
+
+<script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
 
 </body>
+
+
+
+
 </html>
+
+
