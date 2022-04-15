@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+*,
+*::after,
+*::before {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #168ba0;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0e6a7a;
+} 
+
+/* ############## utility classes ###################  */
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  padding: 0.7em 2em;
+  text-decoration: none;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+  margin-top: 1em;
+  text-transform: uppercase;
+  font: 500;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #168ba0;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #0e6f72;
+}
+/*############################ navbar styling ##############################################*/
+
+/* for desktop */
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+  display: none;
+}
+
+.navbar {
+  /* box-shadow: 0 5px 10px 0 #aaa; */
+  position: absolute;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.793);
+  color: #000;
+  opacity: 0.90;
+  z-index: 999;
+}
+.logo {
+  font-size: 2.8rem;
+  order: 1;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  align-items: center;
+}
+
+.navbar .menu-items li {
+  list-style: none;
+  margin-left: 1.5rem;
+}
+.navbar .menu-items {
+  display: flex;
+  order: 2;
+  font-size: 1.5rem;
+}
+
+.navbar a {
+  color: #444;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+  color: #168ba0;
+}
+
+/* showcase section */
+
+.video-area {
+    height: 92vh;
+    position: relative;
+    /* border: 2px solid rebeccapurple; */
+    overflow:hidden;
+  }
+
+#myvid{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  /* height: 100%; */
+  /* min-height: 20%;  */
+}
+
+.navbar2{
+  position: sticky;
+  top: 0%;
+  background-color: #023039;
+}
+
+.st{
+  justify-content: center;
+}
+
+.sticky-container{
+  justify-content: space-around;
+  width: 80%;
+}
+
+.sticky-container li a{
+  color: #ffffff;
+}
