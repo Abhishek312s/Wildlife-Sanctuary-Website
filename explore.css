@@ -135,6 +135,10 @@ body {
   background-color: #023039;
 }
 
+.navbar2 li:nth-child(1) a{
+  color: #d7d4d4e0;
+}
+
 .st{
   justify-content: center;
 }
@@ -159,7 +163,6 @@ body {
 .overview-container {
   display: flex;
   flex-wrap: wrap;
-  /* align-items: center; */
 }
 
 .overview-container span {
@@ -209,7 +212,7 @@ body {
 
 .matters{
   padding: 10rem 0;
-  background-color: rgba(227, 227, 227, 0.886);
+  background: url("./imgs/bg-pattern.jpg");
 }
 
 .matters h2{
@@ -327,6 +330,62 @@ body {
   from {opacity: .4}
   to {opacity: 1}
 }
+
+/* ################ what we are doing #################### */
+
+.wedoing{
+  background-color: #d7d7d7;
+  padding: 4rem 0px;
+}
+
+.wedoing-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.wedoing-container span {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 3rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.wedoing-text p {
+  font-size: 1.6rem;
+  color: #555;
+}
+
+.wedoing-img {
+  width: 100%;
+  /* border: 2px solid saddlebrown; */
+  padding: 20px;
+  margin: auto 0;
+  order: 1;
+}
+
+
+.wedoing-text {
+  flex: 1 1 400px;
+  padding: 30px;
+  margin: auto;
+  order: 2;
+}
+
+.wedoing-img img {
+  display: block;
+  height: 400px;
+  width: 100%;
+  object-fit:cover;
+  margin: auto;
+  object-position:center;
+  border-radius: 5px;
+}
+
+
+/* footer */
+
 
 footer {
   background-color: #444;

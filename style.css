@@ -183,10 +183,94 @@ body {
   border-radius: 5px;
 }
 
+/*  */
+
+#goals{
+
+    background-color: rgba(235, 235, 235, 0.755);
+}
+
+#goals h1{
+  text-align: center;
+  padding: 6rem 0;
+  font-size: 4rem;
+  color: #333;
+}
+
+#goals h1::before{
+  content: ">>";
+  padding-right: 10px;
+  /* border: 2px solid red; */
+}
+#goals h1::after{
+  content: "<<";
+  padding-left: 10px;
+  /* border: 2px solid red; */
+}
+
+.box p {
+  color: rgb(42, 42, 42);
+  font-size: 1.4rem;
+  padding-bottom: 6px;
+}
+
+.box {
+  border-radius: 5px;
+  box-shadow: 0px 30px 40px -20px rgba(189, 189, 189, 0.889);
+  padding: 30px;
+  margin: 20px;  
+}
+
+.cyan {
+  border-top: 3px solid rgb(0, 0, 128);
+}
+.red {
+  border-top: 3px solid rgb(0, 125, 0);
+}
+.blue {
+  border-top: 3px solid orange;
+}
+.orange {
+  border-top: 3px solid rgb(255, 50, 84);
+}
+
+h2 {
+  font-size: 2.4rem;
+  padding-bottom: 6px;
+}
+
+
+@media (min-width: 950px) {
+  .goals-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .goals2-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 8rem;
+  }
+  .box-down {
+      position: relative;
+      top: 150px;
+  }
+  .box {
+      width: 20%;
+   
+  }
+  .header p {
+      width: 30%;
+  }
+  
+}
+
 /* ##################### .contact-us ################### */
 
 #contact {
-  padding: 10rem 0;
+  padding: 14rem 0;
   background-color: rgb(226, 226, 226);
 }
 
@@ -247,6 +331,9 @@ body {
 .form-container a {
   font-size: 1.2rem;
 }
+
+
+
 
 /* ####################### footer ######################### */
 
