@@ -169,45 +169,32 @@ body {
 
 
 
-/*  */
-
-/* Typography =======================*/
+/* featured cardsss */
 
 /* Headings */
 
 /* Main heading for card's front cover */
 .card-front__heading {
   font-size: 1.5rem;
-  margin-top: .25rem;
+  margin-top: 0.25rem;
+  font-weight: 500;
+
+}
+
+/* For both inside page's main heading and 'view me' text on card front cover */
+.inside-page__heading,
+.card-front__text-view {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-top: .2rem;
 }
 
 /* Main heading for inside page */
 .inside-page__heading { 
   padding-bottom: 1rem; 
   width: 100%;
+  font-size: 2rem;
 }
-
-/* Mixed */
-
-/* For both inside page's main heading and 'view me' text on card front cover */
-.inside-page__heading,
-.card-front__text-view {
-  font-size: 1.3rem;
-  font-weight: 800;
-  margin-top: .2rem;
-}
-
-.inside-page__heading--city,
-.card-front__text-view--city { color: #ff62b2; }
-
-.inside-page__heading--ski,
-.card-front__text-view--ski { color: #2aaac1; }
-
-.inside-page__heading--beach,
-.card-front__text-view--beach { color: #fa7f67; }
-
-.inside-page__heading--camping,
-.card-front__text-view--camping { color: #00b97c; }
 
 /* Front cover */
 
@@ -219,24 +206,19 @@ body {
   margin-top: -.2rem;
 }
 
+.card-front img{
+  width: 80px;
+}
+
 /* Back cover */
 
 /* For inside page's body text */
 .inside-page__text {
   color: #333;
+  font-size: 1.3rem;
 }
 
-/* Icons ===========================================*/
-
-.card-front__icon {
-  fill: #fafbfa;
-  font-size: 3vw;
-  height: 3.25rem;
-  margin-top: -.5rem;
-  width: 3.25rem;
-}
-
-/* Buttons =================================================*/
+/* Buttons of cards =================================================*/
 
 .inside-page__btn {
   background-color: transparent;
@@ -250,7 +232,7 @@ body {
   position: relative;
   text-decoration: none;
   transition: all .3s ease;
-  width: 90%;
+  width: 80%;
   z-index: 10;
 }
 
@@ -266,15 +248,6 @@ body {
   z-index: -1;
 }
 
-.inside-page__btn--city { 
-  border-color: #ff40a1;
-  color: #ff40a1;
-}
-
-.inside-page__btn--city::before { 
-  background-color: #ff40a1;
-}
-
 .inside-page__btn--ski { 
   border-color: #279eb2;
   color: #279eb2;
@@ -282,24 +255,6 @@ body {
 
 .inside-page__btn--ski::before { 
   background-color: #279eb2;
-}
-
-.inside-page__btn--beach { 
-  border-color: #fa7f67;
-  color: #fa7f67;
-}
-
-.inside-page__btn--beach::before { 
-  background-color: #fa7f67;
-}
-
-.inside-page__btn--camping { 
-  border-color: #00b97d;
-  color: #00b97d;
-}
-
-.inside-page__btn--camping::before { 
-  background-color: #00b97d;
 }
 
 .inside-page__btn:hover { 
@@ -310,17 +265,17 @@ body {
   transform: scaleY(1);
 }
 
-/* Layout Structure=========================================*/
 
 /* Container to hold all cards in one place */
 .card-area {
   align-items: center;
   display: flex;
-  /* border: 2px solid red; */
   justify-content:center;
   max-width: 900px;
   margin: auto;
   padding: 1rem;
+  margin-bottom: 4rem;
+  
 }
 
 /* Card ============================================*/
@@ -332,29 +287,32 @@ body {
   height: 100%;
   justify-content: center;
   width: 100%;
+  padding-bottom: 3rem;
+  /* border: 2px solid rgb(27, 64, 149); */
 }
 
 /* A container to hold the flip card and the inside page */
 .card {
   background-color: rgba(0,0,0, .05);
   box-shadow: -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.5);
-  height: 15rem;
+  height: 25rem;
   position: relative;
   transition: all 1s ease;
-  width: 15rem;
+  width: 20rem;
+  /* border: 2px solid rgb(149, 27, 145); */
 }
 
 /* Flip card - covering both the front and inside front page */
 
 /* An outer container to hold the flip card. This excludes the inside page */
 .flip-card {
-  height: 15rem;
+  height: 25rem;
   perspective: 100rem;
   position: absolute;
   right: 0;
   transition: all 1s ease;
   visibility: hidden;
-  width: 15rem;
+  width: 20rem;
   z-index: 100;
 }
 
@@ -390,8 +348,8 @@ body {
 /* container for the front side */
 .card-front {
   background-color: #fafbfa;
-  height: 15rem;
-  width: 15rem;
+  height: 25rem;
+  width: 20rem;
 }
 
 /* Front side's top section */
@@ -400,20 +358,27 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 90%, 57% 90%, 50% 100%, 43% 90%, 0 90%);
   display: flex;
   flex-direction: column;
-  height: 12rem;
+  height: 19rem;
   justify-content: center;
   padding: .75rem;
+  /* border: 2px solid rgb(125, 198, 0); */
 }
 
-.card-front__tp--ski {
-  background-color: rgba(0, 74, 111, 0.603);
+.card-front__tp--saf {
+  background-color: rgba(75, 50, 105, 0.916);
+}
+.card-front__tp--tour {
+  background-color: rgba(66, 105, 50, 0.916);
+}
+.card-front__tp--night {
+  background-color: rgba(105, 50, 50, 0.916);
 }
 
 /* Front card's bottom section */
 .card-front__bt {
-  align-items: center;
-  display: flex;
-  justify-content: center;
+  text-align: center;
+  /* margin-top: 20px; */
+  /* border: 2px solid green; */
 }
 
 /* Styling for the back side of the flip card */
@@ -436,14 +401,15 @@ body {
 
 .inside-page {
   background-color: #fafbfa;
-  box-shadow: inset 20rem 0px 5rem -2.5rem rgba(0,0,0,0.25);
+  box-shadow: inset 20rem 0px 5rem -3.5rem rgba(0,0,0,0.25);
   height: 100%;
   padding: 1rem;
   position: absolute;
   right: 0;
   transition: all 1s ease;
-  width: 15rem;
+  width: 20rem;
   z-index: 1;
+  /* border: 2px solid purple; */
 }
 
 .inside-page__container {
@@ -461,7 +427,7 @@ body {
 .card:hover {
   box-shadow:
   -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.75);
-  width: 30rem;
+  width: 40rem;
 }
 
 /* When the card is hovered, the flip card container will rotate */
@@ -473,6 +439,14 @@ body {
 .card:hover .inside-page {
   box-shadow: inset 1rem 0px 5rem -2.5rem rgba(0,0,0,0.1);
 }
+
+@media (max-width: 950px) {
+  .card-area {
+    flex-direction: column;
+  }
+}
+
+
 /* ################# about us ####################### */
 
 #about-us {
