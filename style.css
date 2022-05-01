@@ -29,7 +29,14 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #0e6a7a;
-} 
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 /* ############## utility classes ###################  */
 
@@ -75,7 +82,7 @@ body {
   width: 100%;
   background: #fff;
   color: #000;
-  opacity: 0.90;
+  opacity: 0.9;
   z-index: 999;
 }
 .logo {
@@ -85,7 +92,7 @@ body {
 
 .navbar-container {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   height: 64px;
   align-items: center;
 }
@@ -115,8 +122,7 @@ body {
 
 .showcase-area {
   height: 100vh;
-  background: 
-    url(./imgs/david-clode-nyvR6wbU1ho-unsplash.jpg);
+  background: url(./imgs/david-clode-nyvR6wbU1ho-unsplash.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -125,7 +131,7 @@ body {
 .showcase-container {
   display: flex;
   justify-content: center;
-  align-items:flex-start;
+  align-items: flex-start;
   height: 100%;
   flex-direction: column;
   font-size: 1.6rem;
@@ -137,37 +143,38 @@ body {
 
 /* ################### Intro ######################### */
 
-.intro{
+.intro {
   background-color: rgba(222, 222, 222, 0.175);
 }
 
-.intro .intro-container h1{
+.intro .intro-container h1 {
   text-align: center;
   font-size: 3.2rem;
-  padding: 3rem 0;
+  padding: 6rem 0 3rem 0;
 }
 
-.intro .intro-container p{
+.intro .intro-container p {
   font-size: 1.5rem;
   padding-bottom: 2rem;
 }
 
 /* ################### featured ######################### */
 
-.featured .featured-container h1{
+.featured {
+  padding: 3rem;
+}
+
+.featured .featured-container h1 {
   text-align: center;
   font-size: 3.2rem;
   padding: 2rem 0;
 }
 
-.featured .featured-container p{
+.featured .featured-container p {
   font-size: 1.5rem;
   padding-bottom: 5rem;
   text-align: center;
 }
-
-
-
 
 /* featured cardsss */
 
@@ -178,7 +185,6 @@ body {
   font-size: 1.5rem;
   margin-top: 0.25rem;
   font-weight: 500;
-
 }
 
 /* For both inside page's main heading and 'view me' text on card front cover */
@@ -186,27 +192,29 @@ body {
 .card-front__text-view {
   font-size: 1.5rem;
   font-weight: 800;
-  margin-top: .2rem;
+  margin-top: 0.2rem;
 }
 
 /* Main heading for inside page */
-.inside-page__heading { 
-  padding-bottom: 1rem; 
+.inside-page__heading {
+  padding-bottom: 1rem;
   width: 100%;
   font-size: 2rem;
 }
 
 /* Front cover */
 
-.card-front__tp { color: #fafbfa; }
+.card-front__tp {
+  color: #fafbfa;
+}
 
 /* For pricing text on card front cover */
 .card-front__text-price {
   font-size: 1.2rem;
-  margin-top: -.2rem;
+  margin-top: -0.2rem;
 }
 
-.card-front img{
+.card-front img {
   width: 80px;
 }
 
@@ -223,59 +231,57 @@ body {
 .inside-page__btn {
   background-color: transparent;
   border: 3px solid;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   font-size: 1.2rem;
   font-weight: 600;
   margin-top: 2rem;
   overflow: hidden;
-  padding: .7rem .75rem;
+  padding: 0.7rem 0.75rem;
   position: relative;
   text-decoration: none;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   width: 80%;
   z-index: 10;
 }
 
-.inside-page__btn::before { 
+.inside-page__btn::before {
   content: "";
   height: 100%;
   left: 0;
   position: absolute;
   top: 0;
   transform: scaleY(0);
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   width: 100%;
   z-index: -1;
 }
 
-.inside-page__btn--ski { 
+.inside-page__btn--ski {
   border-color: #279eb2;
   color: #279eb2;
 }
 
-.inside-page__btn--ski::before { 
+.inside-page__btn--ski::before {
   background-color: #279eb2;
 }
 
-.inside-page__btn:hover { 
+.inside-page__btn:hover {
   color: #fafbfa;
 }
 
-.inside-page__btn:hover::before { 
+.inside-page__btn:hover::before {
   transform: scaleY(1);
 }
-
 
 /* Container to hold all cards in one place */
 .card-area {
   align-items: center;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   max-width: 900px;
   margin: auto;
   padding: 1rem;
   margin-bottom: 4rem;
-  
 }
 
 /* Card ============================================*/
@@ -293,8 +299,8 @@ body {
 
 /* A container to hold the flip card and the inside page */
 .card {
-  background-color: rgba(0,0,0, .05);
-  box-shadow: -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.05);
+  box-shadow: -0.1rem 1.7rem 6.6rem -3.2rem rgba(0, 0, 0, 0.5);
   height: 25rem;
   position: relative;
   transition: all 1s ease;
@@ -360,7 +366,7 @@ body {
   flex-direction: column;
   height: 19rem;
   justify-content: center;
-  padding: .75rem;
+  padding: 0.75rem;
   /* border: 2px solid rgb(125, 198, 0); */
 }
 
@@ -401,7 +407,7 @@ body {
 
 .inside-page {
   background-color: #fafbfa;
-  box-shadow: inset 20rem 0px 5rem -3.5rem rgba(0,0,0,0.25);
+  box-shadow: inset 20rem 0px 5rem -3.5rem rgba(0, 0, 0, 0.25);
   height: 100%;
   padding: 1rem;
   position: absolute;
@@ -417,7 +423,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  text-align: center; 
+  text-align: center;
   width: 100%;
 }
 
@@ -425,8 +431,7 @@ body {
 
 /* This is to keep the card centered (within its container) when opened */
 .card:hover {
-  box-shadow:
-  -.1rem 1.7rem 6.6rem -3.2rem rgba(0,0,0,0.75);
+  box-shadow: -0.1rem 1.7rem 6.6rem -3.2rem rgba(0, 0, 0, 0.75);
   width: 40rem;
 }
 
@@ -437,7 +442,7 @@ body {
 
 /* When the card is hovered, the shadow on the inside page will shrink to the left */
 .card:hover .inside-page {
-  box-shadow: inset 1rem 0px 5rem -2.5rem rgba(0,0,0,0.1);
+  box-shadow: inset 1rem 0px 5rem -2.5rem rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 950px) {
@@ -446,138 +451,229 @@ body {
   }
 }
 
+/* ############# information ##################*/
 
-/* ################# about us ####################### */
-
-#about-us {
-  padding: 10rem 0px;
-  background-color: #f5f5f7;
+.information {
+  background-color: #f8f8fe;
+  padding: 8rem 0;
 }
-.about-container {
+
+.information-container {
+  display: flex;
+  font-size: 1.4rem;
+  justify-content: space-between;
+}
+
+.information-container .information-content {
+  /* border: 2px solid red; */
+  max-width: 76%;
+  color: rgb(81, 81, 81);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.information-container .information-content.img {
+  order: 2;
+}
+
+.information-container .enquiry {
+  /* border: 2px solid red; */
+  width: 23%;
+  min-width: 220px;
+  padding: 20px;
+  background-color: #508a4c;
+  color: #fff;
+  border-radius: 5px;
+  max-height: 400px;
+}
+
+.information-container .map{
+    width: 23%;
+    min-width: 220px;
+    max-height: 400px;
+}
+
+.information-container .map iframe{
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.information-container .enquiry.img {
+  order: 1;
+  background-color: transparent;
+  padding: 0;
+}
+
+.information-container .enquiry.img img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+
+.information-container .enquiry form h3 {
+  text-align: center;
+}
+
+.information-container .enquiry form input,
+.information-container .enquiry form textarea {
+  display: block;
+  margin-top: 15px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.information-container .enquiry form textarea {
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 50px;
+  max-height: 150px;
+}
+
+.information-container .enquiry form button {
+  display: block;
+  border-radius: 4px;
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 17px;
+  transition: all 0.4s ease-in-out;
+}
+
+.information-container .enquiry form button:hover {
+  background-color: rgb(209, 209, 209);
+}
+
+/* ################# card tours ####################### */
+#cardTour {
+  margin: 6rem 0;
+}
+.cardTour-container {
   display: flex;
   flex-wrap: wrap;
-  /* align-items: center; */
+  justify-content: center;
 }
-#about-us .about-container span {
+
+.cardsT {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.cardT--1 .card__img,
+.cardT--1 .cardT__img--hover {
+  background-image: url("./imgs/tigerCardImg.jpg");
+}
+
+.cardT--2 .cardT__img,
+.cardT--2 .cardT__img--hover {
+  background-image: url("./imgs/peoplecardImg.jpg");
+}
+.cardT--3 .cardT__img,
+.cardT--3 .cardT__img--hover {
+  background-image: url("./imgs/waterCardImg.jpg");
+}
+
+.cardT--4 .cardT__img,
+.cardT--4 .cardT__img--hover {
+  background-image: url("./imgs/dikalacardImg.jpg");
+}
+
+.cardT__like {
+  width: 18px;
+}
+
+
+.cardT__img {
+  visibility: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 235px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.cardT__info-hover {
+  position: absolute;
+  padding: 16px;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+}
+
+.cardT__img--hover {
+  transition: 0.2s all ease-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: absolute;
+  height: 235px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  top: 0;
+}
+.cardT {
+  margin-right: 25px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+  background-color: #fff;
+  width: 33.3%;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+}
+.cardT:hover {
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.08, 1.08);
+  cursor: pointer;
+}
+
+.cardT__info {
+  z-index: 2;
+  background-color: #fff;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 16px 24px 24px 24px;
+}
+
+.cardT__category {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
   font-weight: 700;
-  font-size: 1.6rem;
-  color: #666;
+  color: #333333;
 }
 
-.about-text h2 {
-  font-size: 3.2rem;
+.cardT__title {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: rgb(106, 106, 106);
+  font-weight: 500;
 }
 
-.about-text p {
-  font-size: 1.6rem;
-  color: #555;
-}
-
-.about-img {
-  flex: 1 1 400px;
-  padding: 30px;
+.cardT__day {
+  font-weight: 600;
+  text-decoration: none;
+  color: #ad7d52;
 }
 
 
-.about-text {
-  flex: 1 1 400px;
-  padding: 30px;
-  margin: auto;
+.cardT:hover .cardT__info {
+  background-color: transparent;
+  position: relative;
 }
 
-.about-img img {
-  display: block;
-  height: 400px;
-  max-width: 100%;
-  object-fit: cover;
-  margin: auto;
-  object-position: right;
-  border-radius: 5px;
+.cardT:hover .cardT__info-hover {
+  opacity: 1;
 }
 
-/*  */
-
-#goals{
-
-    background-color: rgba(235, 235, 235, 0.755);
-}
-
-#goals h1{
-  text-align: center;
-  padding: 6rem 0;
-  font-size: 4rem;
-  color: #333;
-}
-
-#goals h1::before{
-  content: ">>";
-  padding-right: 10px;
-  /* border: 2px solid red; */
-}
-#goals h1::after{
-  content: "<<";
-  padding-left: 10px;
-  /* border: 2px solid red; */
-}
-
-.box p {
-  color: rgb(42, 42, 42);
-  font-size: 1.4rem;
-  padding-bottom: 6px;
-}
-
-.box {
-  border-radius: 5px;
-  box-shadow: 0px 30px 40px -20px rgba(189, 189, 189, 0.889);
-  padding: 30px;
-  margin: 20px;  
-}
-
-.cyan {
-  border-top: 3px solid rgb(0, 0, 128);
-}
-.red {
-  border-top: 3px solid rgb(0, 125, 0);
-}
-.blue {
-  border-top: 3px solid orange;
-}
-.orange {
-  border-top: 3px solid rgb(255, 50, 84);
-}
-
-h2 {
-  font-size: 2.4rem;
-  padding-bottom: 6px;
-}
-
-
-@media (min-width: 950px) {
-  .goals-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-  
-  .goals2-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding-bottom: 8rem;
-  }
-  .box-down {
-      position: relative;
-      top: 150px;
-  }
-  .box {
-      width: 20%;
-   
-  }
-  .header p {
-      width: 30%;
-  }
-  
-}
 
 /* ##################### .contact-us ################### */
 
@@ -644,9 +740,6 @@ h2 {
   font-size: 1.2rem;
 }
 
-
-
-
 /* ####################### footer ######################### */
 
 footer {
@@ -668,9 +761,9 @@ footer h2 {
   position: fixed;
   bottom: 20px;
   right: 30px;
-  z-index: 99; 
-  border: none; 
-  outline: none; 
+  z-index: 99;
+  border: none;
+  outline: none;
   transition: all 0.4s ease-in-out;
   background-color: #168ba0;
   padding: 10px;
@@ -679,16 +772,15 @@ footer h2 {
 }
 
 #myBtn:hover {
-  background-color:#0e6a7a;
+  background-color: #0e6a7a;
 }
-i{
+i {
   transition: all 0.4s ease-in-out;
 }
 
-#myBtn:hover i{
+#myBtn:hover i {
   transform: rotate(360deg);
 }
-
 
 /* ############# media queries ############### */
 
@@ -760,7 +852,7 @@ i{
     box-shadow: 5px 0px 10px 0px #aaa;
   }
 
-  .navbar .menu-items li:first-child{
+  .navbar .menu-items li:first-child {
     margin-top: 35px;
   }
   .navbar .menu-items li {
@@ -794,14 +886,12 @@ i{
   }
 }
 
-  
-
 /* ########### small screen ############ */
 @media (max-width: 500px) {
   html {
     font-size: 50%;
   }
-  .form-container{
+  .form-container {
     width: 90%;
   }
   .contact-container {
@@ -813,16 +903,14 @@ i{
     margin: 3rem auto;
   }
 
-  .main-title{
+  .main-title {
     font-size: 4.5rem;
   }
-  
-  .main-title ~p{
+
+  .main-title ~ p {
     font-size: 2.1rem;
   }
 }
-
-
 
 /* ######## landscape mode ########### */
 

@@ -73,8 +73,8 @@ body {
   /* box-shadow: 0 5px 10px 0 #aaa; */
   position: absolute;
   width: 100%;
-  background: rgba(255, 255, 255, 0.793);
-  color: #000;
+  background: rgba(255, 255, 255, 0);
+  color: rgb(0, 0, 0);
   opacity: 0.90;
   z-index: 999;
 }
@@ -101,14 +101,14 @@ body {
 }
 
 .navbar a {
-  color: #444;
+  color: rgb(15, 15, 15);
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease-in-out;
 }
 
 .navbar a:hover {
-  color: #168ba0;
+  color: #0e6f72;
 }
 
 /* showcase section */
@@ -133,10 +133,6 @@ body {
   position: sticky;
   top: 0%;
   background-color: #023039;
-}
-
-.navbar2 li:nth-child(1) a{
-  color: #d7d4d4e0;
 }
 
 .st{
