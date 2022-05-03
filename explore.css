@@ -355,7 +355,6 @@ body {
 
 .wedoing-img {
   width: 100%;
-  /* border: 2px solid saddlebrown; */
   padding: 20px;
   margin: auto 0;
   order: 1;
@@ -375,10 +374,68 @@ body {
   width: 100%;
   object-fit:cover;
   margin: auto;
-  object-position:center;
+  object-position:top;
   border-radius: 5px;
 }
 
+/*############## impact ########################*/
+
+#impact{
+  background-color: rgba(207, 207, 207, 0.521);
+}
+
+#impact .impact-heading{
+  display: block;
+  text-align: center;
+}
+
+#impact .impactBox-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding:0 5rem;
+  margin-top:3rem;
+  margin-bottom:5rem;
+
+}
+
+
+#impact .impactBox-container div{
+  border-top:5px solid #080065;
+  width: 200px;
+  background-color: rgba(255, 255, 255, 0.349);
+  padding: 4rem 2rem;
+  margin: 10px;
+  color: #444;
+  border-radius: 5px;
+}
+
+#impact .impactBox-container div:nth-child(2){
+  border-top:5px solid #005f09;
+}
+#impact .impactBox-container div:nth-child(3){
+  border-top:5px solid #700045;
+}
+#impact .impactBox-container div:nth-child(4){
+  border-top:5px solid #868b00;
+}
+
+#impact .impactBox-container div h2{
+  margin-bottom: 6px;
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+#impact .impactBox-container div p{
+  font-size: 1.5rem;
+  text-align: center;
+  color: #000;
+}
+
+#impact .impact-text{
+  text-align: center;
+}
 
 
 
