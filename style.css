@@ -803,7 +803,7 @@ h2 {
 
 #contact {
   padding: 14rem 0;
-  background-color: rgb(226, 226, 226);
+  background-color: rgba(226, 226, 226, 0.816);
 }
 
 .contact-container {
