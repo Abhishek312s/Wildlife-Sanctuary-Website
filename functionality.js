@@ -21,7 +21,9 @@ function topFunction() {
 
 
 let Gbtn = document.getElementById("Gbtn");
+let Hbtn = document.getElementById("Hbtn");
 let Gwrapper = document.getElementById("Gwrapper");
+let hotelListing = document.querySelector(".moreHotels");
 
 function morePhotos() {
 
@@ -63,7 +65,98 @@ function morePhotos() {
 </div>`
 }
 
-Gbtn.addEventListener('click', () => {
+function moreHotels() {
+  hotelListing.innerHTML += `<div class="Hcard">
+  <div class="Himg">
+      <img src="../imgs/hotel2.jpg" alt="Manu Mahrani Resort">
+  </div>
+  <div class="Hcontent">
+      <h3>Bordehi Tusker Trail Resort</h3>
+      <label><i class="fa fa-map-marker" aria-hidden="true"></i> Government School, Opppsite
+          Sawaldhey, Dhela Rd, shamnagar, Madhya Pradesh 244715, Bordehi</label>
+      <div class="Hdetail">
+          <h4>Luxury Room <img src="../imgs/people-icon.png" alt="people images"> </h4>
+          <span>Jungle side Resort</span>
+          <span>Near Safari Gate Jhirna, Dhela</span>
+          <ul>
+              <li>Air Conditioning</li>
+              <li>Wifi</li>
+              <li>Dining Area</li>
+              <li>Parking</li>
+              <li>Living Room</li>
+              <li>Bathroom</li>
+              <li>Housekeeping</li>
+          </ul>
+      </div>
+  </div>
+  <div class="Hpricing">
+      <h3>₹ 5200</h3>
+      <p>Per Night + Taxes</p>
 
+  </div>
+</div><div class="Hcard">
+<div class="Himg">
+    <img src="../imgs/hotel4.jpg" alt="Manu Mahrani Resort">
+</div>
+<div class="Hcontent">
+    <h3>De Coracao Resort</h3>
+    <label><i class="fa fa-map-marker" aria-hidden="true"></i> Dhikuli shamnagar, Naiktail,
+        Madhya Pradesh 244715</label>
+    <div class="Hdetail">
+        <h4>Luxury Room <img src="../imgs/people-icon.png" alt="people images"> </h4>
+        <span>Jungle side Resort</span>
+        <span>Near Safari Gate Jhirna, Dhela</span>
+        <ul>
+            <li>Air Conditioning</li>
+            <li>Wifi</li>
+            <li>Dining Area</li>
+            <li>Parking</li>
+            <li>Living Room</li>
+            <li>Bathroom</li>
+            <li>Housekeeping</li>
+        </ul>
+    </div>
+</div>
+<div class="Hpricing">
+    <h3>₹ 6500</h3>
+    <p>Per Night + Taxes</p>
+
+</div>
+</div><div class="Hcard">
+<div class="Himg">
+    <img src="../imgs/hotel3.jpg" alt="Manu Mahrani Resort">
+</div>
+<div class="Hcontent">
+    <h3>Beyond Stay Vasavana Resort</h3>
+    <label><i class="fa fa-map-marker" aria-hidden="true"></i> Government School, Opppsite
+        Sawaldhey, Dhela Rd, Bodehi, Madhya Pradesh 244715, Bordehi</label>
+    <div class="Hdetail">
+        <h4>Luxury Room <img src="../imgs/people-icon.png" alt="people images"> </h4>
+        <span>River side Resort</span>
+        <span>Near Safari Gate Bijrani, Garjiya</span>
+        <ul>
+            <li>Air Conditioning</li>
+            <li>Wifi</li>
+            <li>Dining Area</li>
+            <li>Parking</li>
+            <li>Living Room</li>
+            <li>Bathroom</li>
+            <li>Housekeeping</li>
+        </ul>
+    </div>
+</div>
+<div class="Hpricing">
+    <h3>₹ 5400</h3>
+    <p>Per Night + Taxes</p>
+
+</div>
+</div>`
+}
+
+Gbtn?.addEventListener('click', () => {
   morePhotos();
+});
+
+Hbtn?.addEventListener('click', () => {
+  moreHotels();
 });
