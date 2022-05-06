@@ -17,6 +17,8 @@
     .payment-container {
         border: 1px solid rgb(214, 214, 214);
         background-color: rgb(237, 237, 237);
+        width: 100%;
+        /* margin: 0%; */
     }
 
     .paymenthead {
@@ -25,6 +27,8 @@
         color: rgb(241, 241, 241);
         margin: auto;
         border-radius: 5px;
+        /* border: 2px solid red; */
+        margin-bottom: 2rem;
 
     }
 
@@ -35,236 +39,333 @@
         font-weight: 500;
     }
 
-    .paymentform{
-        padding: 20px;
+    .paymentform {
+        padding: 10px;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         width: 100%;
     }
-    .paymentform div{
+
+    .paymentform div {
         width: 100%;
         text-align: center;
     }
 
-    .paymentform div input,.paymentform div select{
+    .paymentform div input,
+    .paymentform div select {
         width: 90%;
         text-align: center;
         padding: 7px;
         outline: none;
         border-radius: 5px;
-        border: none;
-        
+        border: 1px solid rgba(0, 0, 0, 0.468);
+
     }
-    .paymentform div:nth-child(1) input{
+
+    .paymentform div:nth-child(1) input {
         width: 100%;
-        /* border: 2px solid red; */
     }
-    .paymentform div:nth-child(2){
-        /* border: 2px solid red; */
+
+    .paymentform div:nth-child(2) {
         text-align: right;
         width: 40%;
+    }
+
+    .btn-container {
+        text-align: center;
+    }
+
+    .btn-container button {
+        padding: 13px 20px;
+        margin: 10px;
+        margin-top: 30px;
+        color: #fff;
+        border-radius: 5px;
+        font-size: 1.6rem;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .btn-container {
+        padding-bottom: 20px;
+        border-bottom: 2px solid rgb(61, 61, 61);
+    }
+
+    .payment-container button {
+        margin: 10px;
+        background-color: rgb(164, 156, 46);
+        color: #fff;
+        transition: all 0.4s ease-in-out;
+        font-weight: 700;
+    }
+
+    .payment-container button:hover {
+        margin: 10px;
+        background-color: rgb(122, 114, 0);
+        color: #fff;
+    }
+
+    .btn-container button:nth-child(1) {
+        background-color: rgb(188, 0, 0);
+    }
+
+    .btn-container button:nth-child(1):hover {
+        background-color: rgb(135, 0, 0);
+    }
+
+    .btn-container button:nth-child(2) {
+        background-color: rgb(0, 111, 0);
+    }
+
+    .btn-container button:nth-child(2):hover {
+        background-color: rgb(0, 78, 0);
+    }
+
+    main ul {
+        /* border: 2px solid red; */
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    main li {
+        width: 40%;
+        margin: 10px;
+        font-size: 1.3rem;
+    }
+
+    main li span{
+        padding: 7px;
+        background-color: rgba(27, 82, 0, 0.84);
+        border-radius: 5px;
+        color: #fff;
     }
 </style>
 
 <body>
 
-    <div class="payment-container container">
-        <div class="paymenthead">
-            <h2>Booking Details : </h2>
-        </div>
-        <div class="paymentform">
-            <div> <input type="text" required placeholder="Enter Name" /> </div>
-            <div> <input type="number" required placeholder="Age" /> </div>
-            <div>
-                <select name="gender" id="gender" required>
-                    <option value="">Gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                </select>
+    <main>
+
+        <section class="container">
+            <div class="payment-container container">
+                <div class="paymenthead">
+                    <h2>Booking Details : </h2>
+                </div>
+                <div class="paymentform">
+                    <div> <input type="text" required placeholder="Enter Name" /> </div>
+                    <div> <input type="number" required placeholder="Age" /> </div>
+                    <div>
+                        <select name="gender" id="gender" required>
+                            <option value="">Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select name="nationality" id="nationality" required>
+                            <option value="">Nationality</option>
+                            <option value="indian">Indian</option>
+                            <option value="foreigner">Foreigner</option>
+                        </select>
+                    </div>
+                    <div> <select name="ID" id="ID" required>
+                            <option value="">Select ID</option>
+                            <option value="aadharcard">Aadhar Card</option>
+                            <option value="voterid">Voter ID</option>
+                            <option value="passport">Passport</option>
+                            <option value="drivinglicense">Driving License</option>
+                            <option value="pancard">Pan Card</option>
+                            <option value="otherid">Any Other ID</option>
+                        </select></div>
+                    <div> <input type="number" required placeholder="ID Number" /> </div>
+                </div>
+
+
+                <div class="paymentform">
+                    <div> <input type="text" required placeholder="Enter Name" /> </div>
+                    <div> <input type="number" required placeholder="Age" /> </div>
+                    <div>
+                        <select name="gender" id="gender" required>
+                            <option value="">Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select name="nationality" id="nationality" required>
+                            <option value="">Nationality</option>
+                            <option value="indian">Indian</option>
+                            <option value="foreigner">Foreigner</option>
+                        </select>
+                    </div>
+                    <div> <select name="ID" id="ID" required>
+                            <option value="">Select ID</option>
+                            <option value="aadharcard">Aadhar Card</option>
+                            <option value="voterid">Voter ID</option>
+                            <option value="passport">Passport</option>
+                            <option value="drivinglicense">Driving License</option>
+                            <option value="pancard">Pan Card</option>
+                            <option value="otherid">Any Other ID</option>
+                        </select></div>
+                    <div> <input type="number" required placeholder="ID Number" /> </div>
+                </div>
+
+                <div class="paymentform">
+                    <div> <input type="text" required placeholder="Enter Name" /> </div>
+                    <div> <input type="number" required placeholder="Age" /> </div>
+                    <div>
+                        <select name="gender" id="gender" required>
+                            <option value="">Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select name="nationality" id="nationality" required>
+                            <option value="">Nationality</option>
+                            <option value="indian">Indian</option>
+                            <option value="foreigner">Foreigner</option>
+                        </select>
+                    </div>
+                    <div> <select name="ID" id="ID" required>
+                            <option value="">Select ID</option>
+                            <option value="aadharcard">Aadhar Card</option>
+                            <option value="voterid">Voter ID</option>
+                            <option value="passport">Passport</option>
+                            <option value="drivinglicense">Driving License</option>
+                            <option value="pancard">Pan Card</option>
+                            <option value="otherid">Any Other ID</option>
+                        </select></div>
+                    <div> <input type="number" required placeholder="ID Number" /> </div>
+                </div>
+
+
+
+
+                <div class="paymentform">
+                    <div> <input type="text" required placeholder="Enter Name" /> </div>
+                    <div> <input type="number" required placeholder="Age" /> </div>
+                    <div>
+                        <select name="gender" id="gender" required>
+                            <option value="">Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select name="nationality" id="nationality" required>
+                            <option value="">Nationality</option>
+                            <option value="indian">Indian</option>
+                            <option value="foreigner">Foreigner</option>
+                        </select>
+                    </div>
+                    <div> <select name="ID" id="ID" required>
+                            <option value="">Select ID</option>
+                            <option value="aadharcard">Aadhar Card</option>
+                            <option value="voterid">Voter ID</option>
+                            <option value="passport">Passport</option>
+                            <option value="drivinglicense">Driving License</option>
+                            <option value="pancard">Pan Card</option>
+                            <option value="otherid">Any Other ID</option>
+                        </select></div>
+                    <div> <input type="number" required placeholder="ID Number" /> </div>
+                </div>
+
+
+
+
+                <div class="paymentform">
+                    <div> <input type="text" required placeholder="Enter Name" /> </div>
+                    <div> <input type="number" required placeholder="Age" /> </div>
+                    <div>
+                        <select name="gender" id="gender" required>
+                            <option value="">Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select name="nationality" id="nationality" required>
+                            <option value="">Nationality</option>
+                            <option value="indian">Indian</option>
+                            <option value="foreigner">Foreigner</option>
+                        </select>
+                    </div>
+                    <div> <select name="ID" id="ID" required>
+                            <option value="">Select ID</option>
+                            <option value="aadharcard">Aadhar Card</option>
+                            <option value="voterid">Voter ID</option>
+                            <option value="passport">Passport</option>
+                            <option value="drivinglicense">Driving License</option>
+                            <option value="pancard">Pan Card</option>
+                            <option value="otherid">Any Other ID</option>
+                        </select></div>
+                    <div> <input type="number" required placeholder="ID Number" /> </div>
+                </div>
+
+
+
+
+                <div class="paymentform">
+                    <div> <input type="text" required placeholder="Enter Name" /> </div>
+                    <div> <input type="number" required placeholder="Age" /> </div>
+                    <div>
+                        <select name="gender" id="gender" required>
+                            <option value="">Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <select name="nationality" id="nationality" required>
+                            <option value="">Nationality</option>
+                            <option value="indian">Indian</option>
+                            <option value="foreigner">Foreigner</option>
+                        </select>
+                    </div>
+                    <div> <select name="ID" id="ID" required>
+                            <option value="">Select ID</option>
+                            <option value="aadharcard">Aadhar Card</option>
+                            <option value="voterid">Voter ID</option>
+                            <option value="passport">Passport</option>
+                            <option value="drivinglicense">Driving License</option>
+                            <option value="pancard">Pan Card</option>
+                            <option value="otherid">Any Other ID</option>
+                        </select></div>
+                    <div> <input type="number" required placeholder="ID Number" /> </div>
+                </div>
+                <button class="btn">Add +</button>
             </div>
-            <div>
-                <select name="nationality" id="nationality" required>
-                    <option value="">Nationality</option>
-                    <option value="indian">Indian</option>
-                    <option value="foreigner">Foreigner</option>
-                </select>
+
+
+
+            <div class="btn-container">
+                <button class="btn">Payable Amount : </button>
+
+                <button class="btn">Pay Now</button>
             </div>
-            <div> <select name="ID" id="ID" required>
-                    <option value="">Select ID</option>
-                    <option value="aadharcard">Aadhar Card</option>
-                    <option value="voterid">Voter ID</option>
-                    <option value="passport">Passport</option>
-                    <option value="drivinglicense">Driving License</option>
-                    <option value="pancard">Pan Card</option>
-                    <option value="otherid">Any Other ID</option>
-                </select></div>
-            <div> <input type="number" required placeholder="ID Number" /> </div>
-        </div>
+        </section>
+
+        <ul class="container">
+            <li>Booking Date : <span id="Bdate"></span></li>
+            <li>Booking Zone : <span id="Bzone"></span></li>
+            <li>Booking Timing : <span id="Btiming"></span> </li>
+            <li>Booking Vehicle : <span id="Bvehicle"></span> </li>
+            <li>Booking Mobile : <span id="Bmobile"></span> </li>
+            <li>Booking Email ID : <span id="Bemail"></span></li>
+        </ul>
 
 
-        <div class="paymentform">
-            <div> <input type="text" required placeholder="Enter Name" /> </div>
-            <div> <input type="number" required placeholder="Age" /> </div>
-            <div>
-                <select name="gender" id="gender" required>
-                    <option value="">Gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            <div>
-                <select name="nationality" id="nationality" required>
-                    <option value="">Nationality</option>
-                    <option value="indian">Indian</option>
-                    <option value="foreigner">Foreigner</option>
-                </select>
-            </div>
-            <div> <select name="ID" id="ID" required>
-                    <option value="">Select ID</option>
-                    <option value="aadharcard">Aadhar Card</option>
-                    <option value="voterid">Voter ID</option>
-                    <option value="passport">Passport</option>
-                    <option value="drivinglicense">Driving License</option>
-                    <option value="pancard">Pan Card</option>
-                    <option value="otherid">Any Other ID</option>
-                </select></div>
-            <div> <input type="number" required placeholder="ID Number" /> </div>
-        </div>
-
-
-
-        <div class="paymentform">
-            <div> <input type="text" required placeholder="Enter Name" /> </div>
-            <div> <input type="number" required placeholder="Age" /> </div>
-            <div>
-                <select name="gender" id="gender" required>
-                    <option value="">Gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            <div>
-                <select name="nationality" id="nationality" required>
-                    <option value="">Nationality</option>
-                    <option value="indian">Indian</option>
-                    <option value="foreigner">Foreigner</option>
-                </select>
-            </div>
-            <div> <select name="ID" id="ID" required>
-                    <option value="">Select ID</option>
-                    <option value="aadharcard">Aadhar Card</option>
-                    <option value="voterid">Voter ID</option>
-                    <option value="passport">Passport</option>
-                    <option value="drivinglicense">Driving License</option>
-                    <option value="pancard">Pan Card</option>
-                    <option value="otherid">Any Other ID</option>
-                </select></div>
-            <div> <input type="number" required placeholder="ID Number" /> </div>
-        </div>
-
-
-
-
-        <div class="paymentform">
-            <div> <input type="text" required placeholder="Enter Name" /> </div>
-            <div> <input type="number" required placeholder="Age" /> </div>
-            <div>
-                <select name="gender" id="gender" required>
-                    <option value="">Gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            <div>
-                <select name="nationality" id="nationality" required>
-                    <option value="">Nationality</option>
-                    <option value="indian">Indian</option>
-                    <option value="foreigner">Foreigner</option>
-                </select>
-            </div>
-            <div> <select name="ID" id="ID" required>
-                    <option value="">Select ID</option>
-                    <option value="aadharcard">Aadhar Card</option>
-                    <option value="voterid">Voter ID</option>
-                    <option value="passport">Passport</option>
-                    <option value="drivinglicense">Driving License</option>
-                    <option value="pancard">Pan Card</option>
-                    <option value="otherid">Any Other ID</option>
-                </select></div>
-            <div> <input type="number" required placeholder="ID Number" /> </div>
-        </div>
-
-
-
-
-        <div class="paymentform">
-            <div> <input type="text" required placeholder="Enter Name" /> </div>
-            <div> <input type="number" required placeholder="Age" /> </div>
-            <div>
-                <select name="gender" id="gender" required>
-                    <option value="">Gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            <div>
-                <select name="nationality" id="nationality" required>
-                    <option value="">Nationality</option>
-                    <option value="indian">Indian</option>
-                    <option value="foreigner">Foreigner</option>
-                </select>
-            </div>
-            <div> <select name="ID" id="ID" required>
-                    <option value="">Select ID</option>
-                    <option value="aadharcard">Aadhar Card</option>
-                    <option value="voterid">Voter ID</option>
-                    <option value="passport">Passport</option>
-                    <option value="drivinglicense">Driving License</option>
-                    <option value="pancard">Pan Card</option>
-                    <option value="otherid">Any Other ID</option>
-                </select></div>
-            <div> <input type="number" required placeholder="ID Number" /> </div>
-        </div>
-
-
-
-
-        <div class="paymentform">
-            <div> <input type="text" required placeholder="Enter Name" /> </div>
-            <div> <input type="number" required placeholder="Age" /> </div>
-            <div>
-                <select name="gender" id="gender" required>
-                    <option value="">Gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            <div>
-                <select name="nationality" id="nationality" required>
-                    <option value="">Nationality</option>
-                    <option value="indian">Indian</option>
-                    <option value="foreigner">Foreigner</option>
-                </select>
-            </div>
-            <div> <select name="ID" id="ID" required>
-                    <option value="">Select ID</option>
-                    <option value="aadharcard">Aadhar Card</option>
-                    <option value="voterid">Voter ID</option>
-                    <option value="passport">Passport</option>
-                    <option value="drivinglicense">Driving License</option>
-                    <option value="pancard">Pan Card</option>
-                    <option value="otherid">Any Other ID</option>
-                </select></div>
-            <div> <input type="number" required placeholder="ID Number" /> </div>
-        </div>
-    </div>
+    </main>
 
     <script>
         let url_string = window.location;
@@ -275,12 +376,22 @@
         let shift = url.searchParams.get("shift");
         let phone = url.searchParams.get("phone");
         let email = url.searchParams.get("email");
-        console.log(name);
-        console.log(email);
-        console.log(date);
-        console.log(vehicle);
-        console.log(shift);
-        console.log(phone); 
+
+        let Bdate=document.getElementById("Bdate");
+        let Bzone=document.getElementById("Bzone");
+        let Btiming=document.getElementById("Btiming");
+        let Bvehicle=document.getElementById("Bvehicle");
+        let Bmobile=document.getElementById("Bmobile");
+        let Bemail=document.getElementById("Bemail");
+        
+        
+        Bdate.innerText=date.split("-").reverse().join("-");
+        Bzone.innerText=vehicle.split(' ')[1];
+        Btiming.innerText=shift;
+        Bvehicle.innerText=vehicle.split(' ')[0];
+        Bmobile.innerText=phone;
+        Bemail.innerText=email;
+
     </script>
 </body>
 
