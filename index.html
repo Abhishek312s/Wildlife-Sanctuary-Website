@@ -11,6 +11,38 @@
     <title>Bordehi Wildlife Santaury</title>
     <link rel="icon" type="image/x-icon" href="./imgs/favicon.webp">
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('yMNpHcl0cmcg58zCT');
+        })();
+    </script>
+    <script>
+        function sendMail(e) {
+            e.preventDefault();
+            let fname = document.getElementById("fname").value;
+            let query = document.getElementById("query").value;
+            let mobile = document.getElementById("mobileName").value;
+            let email = document.getElementById("email").value;
+            var tempParams = {
+                from_name: fname,
+                email: email,
+                phone: mobile,
+                message: query
+            };
+            if (fname.length > 0 && query.length > 0 && mobile.length > 0 && email.length > 0) {
+                emailjs.send('service_ar3n2eq', 'template_822h99h', tempParams)
+                    .then(function (res) {
+                        console.log("Success", res.status);
+                    })
+                    window.location.href="#open-modal2";
+            }
+            else{
+                console.log("inputs not filled");
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -140,7 +172,7 @@
                                 Book online Jeep Safari or Canter Safari for 3 different zones, Book Early to Get Best
                                 Zone!
                             </p>
-                            <a href="#" class="inside-page__btn inside-page__btn--ski">View deals</a>
+                            <a href="./safari/safari.html" class="inside-page__btn inside-page__btn--ski">View deals</a>
                         </div>
                     </div>
                 </div>
@@ -239,7 +271,8 @@
                                 Indulge your passion of adventure as you join Tour to visit breathtaking parts of
                                 Bordehi wildlife.
                             </p>
-                            <a href="./hotelsPage/hotels.html" class="inside-page__btn inside-page__btn--ski">View deals</a>
+                            <a href="./hotelsPage/hotels.html" class="inside-page__btn inside-page__btn--ski">View
+                                deals</a>
                         </div>
                     </div>
                 </div>
@@ -289,7 +322,7 @@
 
                     <textarea name="query" id="query" placeholder="Post your query" rows="4" required></textarea>
 
-                    <button type="submit" class="btn">submit</button>
+                    <button type="submit" class="btn" onclick="sendMail(event)">submit</button>
                 </form>
             </div>
         </div>
@@ -451,7 +484,9 @@
 
             <div class="fbox">
                 <h3> Bordehi Wildlife Santaury <i class="fa-brands fa-phoenix-framework"></i></h3>
-                <p>Saving nature is at the very heart of what we do as Bordehi Wildlife Santaury. For 60 years, we have made it our mission to find solutions that save the marvelous array of life on our planet by applying the best science available and working closely with local communities.
+                <p>Saving nature is at the very heart of what we do as Bordehi Wildlife Santaury. For 60 years, we have
+                    made it our mission to find solutions that save the marvelous array of life on our planet by
+                    applying the best science available and working closely with local communities.
 
                     But our work is far from done!</p>
                 <div class="share">
@@ -487,9 +522,29 @@
             &copy; 2022, all rights reserved. </div>
 
     </section>
+
+    <div id="open-modal2" class="modal-window window2">
+        <div>
+            <a href="#" title="Close" onclick="home()" class="modal-close">&#10060;</a>
+            <div>
+                <img src="./imgs/emailDone.png" alt="mail">
+                <h2>Email Acknowledgement</h2>
+                <h5>We have received your Email and We'll try Our best to revert back as soon as possible</h5>
+                <a href="#" title="Close" onclick="home()" class="btn closebtn">Close</a>
+            </div>
+        </div>
+    </div>
+
     <button onclick="topFunction()" id="myBtn" title="Go to Top"><i class='fas fa-angle-up'></i></button>
     <!-- footer section ends -->
     <script src="./functionality.js"></script>
+    <script>
+        function home() {
+            console.log("hello");
+            window.location.replace("/WebTech-project/index.html");
+        }
+    </script>
+
 </body>
 
 </html>

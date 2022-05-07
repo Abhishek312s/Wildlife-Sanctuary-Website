@@ -113,7 +113,8 @@
                         </tr>
                         <tr>
                             <th><strong>Inclusions</strong> </th>
-                            <td id="refrencebookform">Permission of CTR, Jeep, Driver, Permit and All Entries &amp; Taxes.<br> * Guide Fee to
+                            <td id="refrencebookform">Permission of CTR, Jeep, Driver, Permit and All Entries &amp;
+                                Taxes.<br> * Guide Fee to
                                 be
                                 paid
                                 by the guest on the spot directly. <br>
@@ -159,7 +160,7 @@
         <form action="./payment.html">
             <h1>Safari Booking</h1>
             <div class="dates"><label for="date">Select Date</label>
-                <input type="date" name="date" id="date" required>
+                <input type="date" name="date" id="datefield" required>
             </div>
             <div>
                 <select name="vehicle" id="vehicle" required>
@@ -300,7 +301,11 @@
 
     <button onclick="topFunction()" id="myBtn" title="Go to Top"><i class='fas fa-angle-up'></i></button>
     <script src="../functionality.js" async></script>
-    
+    <script>
+
+        document.getElementById('datefield').min = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000).toISOString().split("T")[0];
+    </script>
+
 </body>
 
 </html>

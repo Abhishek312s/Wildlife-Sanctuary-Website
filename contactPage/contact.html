@@ -1,16 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" type="image/x-icon" href="../imgs/favicon.webp">
     <link rel="stylesheet" href="../style.css">
     <title>Bordehi Wildlife-Contact Us</title>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('yMNpHcl0cmcg58zCT');
+        })();
+    </script>
+    <script>
+        function sendMail(e) {
+            e.preventDefault();
+            let fname = document.getElementById("fname").value;
+            let msg = document.getElementById("msg").value;
+            let email = document.getElementById("email").value;
+            var tempParams = {
+                from_name: fname,
+                email: email,
+                phone: "",
+                message: msg
+            };
+            console.log(tempParams);
+            if (fname.length > 0 && msg.length > 0 && email.length > 0) {
+                emailjs.send('service_ar3n2eq', 'template_822h99h', tempParams)
+                    .then(function (res) {
+                        console.log("Success", res.status);
+                    })
+                    window.location.href="#open-modal2";
+            }
+            else{
+                console.log("inputs not filled");
+            }
+        }
+    </script>
 </head>
+
 <body>
 
     <nav class="navbar">
@@ -52,20 +87,21 @@
 
 
     <section id="contact">
-        <form action="#">
-        <div class="contact-container container">
-            <div class="contact-img">
-                <img src="../imgs/man-walking-dog.jpg" alt="">
+        <form>
+            <div class="contact-container container">
+                <div class="contact-img">
+                    <img src="../imgs/man-walking-dog.jpg" alt="man and dog">
+                </div>
+                <div class="form-container">
+                    <h2>Contact Us</h2>
+                    <input type="text" id="fname" name="fname" placeholder="Name" required>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <textarea placeholder="Type Your Message Here" name="msg" id="msg" cols="30" rows="10"
+                        required></textarea>
+                    <button type="submit" class="btn btn-primary" onclick="sendMail(event)">Submit</button>
+                </div>
             </div>
-            <div class="form-container">
-                <h2>Contact Us</h2>
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Type Your Message Here" name="" id="" cols="30" rows="10" required></textarea>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-        </div>
-    </form>
+        </form>
     </section>
 
 
@@ -112,7 +148,27 @@
             &copy; 2022, all rights reserved. </div>
 
     </section>
+
+    <div id="open-modal2" class="modal-window window2">
+        <div>
+            <a href="#" title="Close" onclick="home()" class="modal-close">&#10060;</a>
+            <div>
+                <img src="../imgs/emailDone.png" alt="mail">
+                <h2>Email Acknowledgement</h2>
+                <h5>We have received your Email and We'll try Our best to revert back as soon as possible</h5>
+                <a href="#" title="Close" onclick="home()" class="btn closebtn">Close</a>
+            </div>
+        </div>
+    </div>
+
     <button onclick="topFunction()" id="myBtn" title="Go to Top"><i class='fas fa-angle-up'></i></button>
     <script src="../functionality.js"></script>
+    <script>
+        function home() {
+            console.log("hello");
+            window.location.replace("/WebTech-project/index.html");
+        }
+    </script>
 </body>
+
 </html>

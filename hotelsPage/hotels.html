@@ -10,6 +10,38 @@
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./hotels.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('yMNpHcl0cmcg58zCT');
+        })();
+    </script>
+    <script>
+        function sendMail(e) {
+            e.preventDefault();
+            let fname = document.getElementById("fname").value;
+            let query = document.getElementById("query").value;
+            let mobile = document.getElementById("mobileName").value;
+            let email = document.getElementById("email").value;
+            var tempParams = {
+                from_name: fname,
+                email: email,
+                phone: mobile,
+                message: query
+            };
+            if (fname.length > 0 && query.length > 0 && mobile.length > 0 && email.length > 0) {
+                emailjs.send('service_ar3n2eq', 'template_822h99h', tempParams)
+                    .then(function (res) {
+                        console.log("Success", res.status);
+                    })
+                    window.location.href="#open-modal2";
+            }
+            else{
+                console.log("inputs not filled");
+            }
+        }
+    </script>
     <title>Hotels in Bordehi Wildlife Santaury</title>
 </head>
 
@@ -64,7 +96,7 @@
                     <form action="">
                         <h3>Enquiry</h3>
 
-                        <input type="text" id="fname" name="firstname" required placeholder="Name">
+                        <input type="text" id="fname" name="fname" required placeholder="Name">
 
                         <input type="number" min="0" id="mobileName" name="mobileName" required
                             placeholder="Mobile No.">
@@ -73,7 +105,7 @@
 
                         <textarea name="query" id="query" placeholder="Post your query" rows="4" required></textarea>
 
-                        <button type="submit" class="btn">submit</button>
+                        <button type="submit" onclick="sendMail(event)" class="btn">submit</button>
                     </form>
                 </div>
 
@@ -274,11 +306,27 @@
                 <a id="Hbtn" class="btn btn-primary Hbtn">See More</a>
             </main>
         </div>
-        
-        
     </section>
+
+    <div id="open-modal2" class="modal-window window2">
+        <div>
+            <a href="#" title="Close" onclick="home()" class="modal-close">&#10060;</a>
+            <div>
+                <img src="../imgs/emailDone.png" alt="mail">
+                <h2>Email Acknowledgement</h2>
+                <h5>We have received your Email and We'll try Our best to revert back as soon as possible</h5>
+                <a href="#" title="Close" onclick="home()" class="btn closebtn">Close</a>
+            </div>
+        </div>
+    </div>
     <button onclick="topFunction()" id="myBtn" title="Go to Top"><i class='fas fa-angle-up'></i></button>
     <script src="../functionality.js" async></script>
+    <script>
+        function home() {
+            console.log("hello");
+            window.location.replace("/WebTech-project/index.html");
+        }
+    </script>
 </body>
 
 </html>
