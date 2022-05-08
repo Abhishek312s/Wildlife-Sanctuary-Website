@@ -136,6 +136,29 @@
                     </div>
                 </div>
 
+                <div id="ratz"><h2>&lt;&lt;Rate Our Hotels&gt;&gt;</h2>
+                    <fieldset class="rating">
+
+                        <input type="radio" onclick="starstore(this.id)" id="star5" name="rating" value="5" />
+                        <label class="full" for="star5" id="labelstar5" title="Awesome - 5 stars"></label>
+                
+                        <input type="radio" id="star4" onclick="starstore(this.id)" name="rating" value="4" />
+                        <label class="full" for="star4" id="labelstar4" title="Pretty good - 4 stars"></label>
+                
+                        <input type="radio" id="star3" onclick="starstore(this.id)" name="rating" value="3" /><label class="full"
+                            for="star3" id="labelstar3" title="Meh - 3 stars"></label>
+                
+                        <input type="radio" id="star2" onclick="starstore(this.id)" name="rating" value="2" /><label class="full"
+                            for="star2" id="labelstar2" title="Kinda bad - 2 stars"></label>
+                
+                        <input type="radio" id="star1" onclick="starstore(this.id)" name="rating" value="1" /><label class="full"
+                            for="star1" id="labelstar1" title="Sucks big time - 1 star"></label>
+                
+                    </fieldset>
+                    <div id="addface" style="position: absolute;bottom:10px;left:60%;">
+                        
+                    </div>
+                </div>
 
             </aside>
             <main class="hotel-listing">
@@ -378,6 +401,52 @@
         function home() {
             console.log("hello");
             window.location.replace("/WebTech-project/index.html");
+        }
+
+        let labelstar1=document.getElementById("labelstar1");
+        let labelstar2=document.getElementById("labelstar2");
+        let labelstar3=document.getElementById("labelstar3");
+        let labelstar4=document.getElementById("labelstar4");
+        let labelstar5=document.getElementById("labelstar5");
+        let addface=document.getElementById("addface");
+
+            let storedstar=localStorage.getItem("starRating");
+
+            if (storedstar==="star5") {
+                labelstar1.style.color="#FFD700";
+                labelstar2.style.color="#FFD700";
+                labelstar3.style.color="#FFD700";
+                labelstar4.style.color="#FFD700";
+                labelstar5.style.color="#FFD700";
+                addface.innerHTML=`<img src="https://cdn4.iconfinder.com/data/icons/emojis-flat-pixel-perfect/64/emoji-03-128.png" width="50px" alt="happy">`
+            }
+            else if(storedstar==="star4"){
+                labelstar1.style.color="#FFD700";
+                labelstar2.style.color="#FFD700";
+                labelstar3.style.color="#FFD700";
+                labelstar4.style.color="#FFD700";
+                addface.innerHTML=`<img src="https://cdn4.iconfinder.com/data/icons/emojis-flat-pixel-perfect/64/emoji-64-128.png" width="50px" alt="happy">`
+            }
+            else if(storedstar==="star3"){
+                labelstar1.style.color="#FFD700";
+                labelstar2.style.color="#FFD700";
+                labelstar3.style.color="#FFD700";
+                addface.innerHTML=`<img src="https://cdn4.iconfinder.com/data/icons/emojis-flat-pixel-perfect/64/emoji-04-128.png" width="50px" alt="happy">`
+            }
+            else if(storedstar==="star2"){
+                labelstar1.style.color="#FFD700";
+                labelstar2.style.color="#FFD700";
+                addface.innerHTML=`<img src="https://cdn4.iconfinder.com/data/icons/emojis-flat-pixel-perfect/64/emoji-15-128.png" width="50px" alt="happy">`
+            }
+            else if(storedstar==="star1"){
+                labelstar1.style.color="#FFD700";
+                addface.innerHTML=`<img src="https://cdn4.iconfinder.com/data/icons/emojis-flat-pixel-perfect/64/emoji-14-256.png" width="50px" alt="happy">`
+            }
+            
+        function starstore(id) {
+            console.log(id);
+            localStorage.setItem("starRating", id);
+            location.reload();
         }
     </script>
 </body>

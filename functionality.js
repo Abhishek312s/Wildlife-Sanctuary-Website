@@ -29,39 +29,39 @@ function morePhotos() {
 
   Gwrapper.innerHTML += `<div class="new-box">
   <img src="../imgs/gimg21.jpg"
-      alt="" />
+      alt="animal Image" />
 </div>
 <div class="wide new-box">
   <img src="../imgs/gimg22.jpg"
-      alt="" />
+      alt="animal Image" />
 </div>
 <div>
   <img src="../imgs/gimg23.jpg"
-  alt="" />
+  alt="animal Image" />
 </div>
 <div>
   <img src="../imgs/gimg24.jpg"
-  alt="" />
+  alt="animal Image" />
 </div>
 <div class="tall">
   <img src="../imgs/gimg25.jpg"
-  alt="" />
+  alt="animal Image" />
 </div>
 <div class="wide">
   <img src="../imgs/gimg26.jpg"
-  alt="" />
+  alt="animal Image" />
 </div>
 <div>
   <img src="../imgs/gimg5.jpg"
-  alt="" />
+  alt="animal Image" />
 </div>
 <div class="wide">
   <img src="../imgs/gimg18.jpg"
-  alt="" />
+  alt="animal Image" />
 </div>
 <div class="tall" new-box>
   <img src="../imgs/gimg29.jpg"
-  alt="" />
+  alt="animal Image" />
 </div>`
 }
 
