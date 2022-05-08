@@ -253,24 +253,27 @@
                             <br><br>
 
                             card number
-                            <input type="text" placeholder="Enter card number">
+                            <input type="text" id="cardName" oninput="gatewayAccess()" placeholder="Enter card number">
 
                             Exp month
-                            <input type="text" placeholder="Enter Month">
+                            <input type="text" id="cardMonth" oninput="gatewayAccess()" placeholder="Enter Month">
                             <div id="zip">
                                 <label>
                                     Exp year
-                                    <select>
-                                        <option>Choose Year..</option>
-                                        <option>2022</option>
-                                        <option>2023</option>
-                                        <option>2024</option>
-                                        <option>2025</option>
+                                    <select id="cardYear" oninput="gatewayAccess()">
+                                        <option value="">Choose Year..</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2025">2025</option>
+                                        <option value="2026">2026</option>
+                                        <option value="2027">2027</option>
+                                        <option value="2028">2028</option>
                                     </select>
                                 </label>
                                 <label>
                                     CVV
-                                    <input type="number" placeholder="CVV">
+                                    <input type="number" id="cardCvv" oninput="gatewayAccess()" placeholder="CVV">
                                 </label>
                             </div>
                             <div>
@@ -279,7 +282,7 @@
                                     value="&#8377; 0">
                             </div>
                         </form>
-                        <a id="Pay" href="#open-modal2">Pay</a>
+                        <a id="Pay" style="pointer-events: none" href="#open-modal2">Pay</a>
                     </div>
                 </div>
             </div>
@@ -306,10 +309,20 @@
         let Bvehicle = document.getElementById("Bvehicle");
         let Bmobile = document.getElementById("Bmobile");
         let Bemail = document.getElementById("Bemail");
+
         let addbtn = document.getElementById("addbtn");
+
         let fields = document.getElementById("fields");
+
         let pricePaid = document.getElementById("pricePaid");
+
         let PaynowBtn = document.getElementById("Paynow");
+        let PayBtn = document.getElementById("Pay");
+
+        let cardName = document.getElementById("cardName");
+        let cardMonth = document.getElementById("cardMonth");
+        let cardCvv = document.getElementById("cardCvv");
+        let cardYear = document.getElementById("cardYear");
 
 
         let url_string = window.location;
@@ -398,19 +411,29 @@
             // console.log(sum);
             pricePaid.value = `₹ ${sum}`;
 
-            if (sum>0) {
+            if (sum > 0) {
                 PaynowBtn.style.pointerEvents = "auto";
-                PaynowBtn.style.backgroundColor="rgb(0, 111, 0)";
+                PaynowBtn.style.backgroundColor = "rgb(0, 111, 0)";
             }
-            else{
+            else {
                 PaynowBtn.style.pointerEvents = "none";
-                PaynowBtn.style.backgroundColor= "rgb(62, 62, 62)";
+                PaynowBtn.style.backgroundColor = "rgb(62, 62, 62)";
+            }
+        }
+
+        function gatewayAccess() {
+            if (cardName.value?.length > 0 && cardMonth.value?.length > 0 && cardCvv.value?.length > 0 && cardYear.value?.length > 0) {
+                PayBtn.style.pointerEvents = "auto";
+                PayBtn.style.backgroundColor = "rgb(0, 111, 0)";
+            }
+            else {
+                PayBtn.style.pointerEvents = "none";
+                PayBtn.style.backgroundColor = "rgb(62, 62, 62)";
             }
         }
 
 
         function home() {
-            console.log("hello");
             window.location.replace("/WebTech-project/index.html");
         }
 

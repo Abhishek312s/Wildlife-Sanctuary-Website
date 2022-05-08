@@ -612,6 +612,39 @@ i {
     transform: rotate(-40deg);
   }
 
+  .hotels-container{
+    flex-direction: column;
+  }
+
+  aside{
+    width: 85%;
+    order: 2;
+    margin:5rem auto;
+  }
+
+  .hotels-container .enquiry{
+    width: 100%;
+  }
+  .cardT{
+    width: 100%;
+  }
+  main{
+    width: 100%;
+    order: 1;
+  }
+
+  #hotels .Hcard{
+    flex-direction: column;
+  }
+
+  #hotels .Himg{
+    width: 100%;
+    height: 200px;
+  }
+
+  #hotels .Hpricing{
+    padding: 1.5rem;
+  }
   .footer {
     text-align: center;
   }

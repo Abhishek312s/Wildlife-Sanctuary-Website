@@ -89,10 +89,7 @@
 
 .btn-container a:nth-child(1) {
   background-color: rgb(188, 0, 0);
-}
-
-.btn-container a:nth-child(1):hover {
-  background-color: rgb(135, 0, 0);
+  cursor:default;
 }
 
 .btn-container a:nth-child(2) {
@@ -242,7 +239,7 @@ main li span {
   margin: auto;
   text-align: center;
   padding: 0.7rem 1.5rem;
-  background: #007d3c;
+  background: #585858;
   color: white;
   border: none;
   margin-top: 1rem;

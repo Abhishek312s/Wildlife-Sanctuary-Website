@@ -583,10 +583,6 @@ input::-webkit-inner-spin-button {
   background-image: url("./imgs/dikalacardImg.jpg");
 }
 
-.cardT__like {
-  width: 18px;
-}
-
 .cardT__img {
   visibility: hidden;
   background-size: cover;
@@ -1201,13 +1197,41 @@ i {
     margin: 0%;
   }
 
-  .about-container{
+  .information-container{
     flex-direction: column;
   }
 
-  .footer{
-    text-align: center;
-}
+  .information-container .information-content{
+    order: 2;
+    max-width: 100%;
+  }
+  .information-container .enquiry{
+    width: 80%;
+    margin:40px auto;
+    order: 1;
+  }
+
+  .cardsT{
+    flex-direction: column;
+  }
+
+  .cardT{
+    width: 80%;
+    margin:0 auto;
+    margin-bottom: 40px;
+  }
+
+  .information-container .map{
+    width: 80%;
+    margin: 6rem auto;
+    margin-top: 0;
+    height: 500px;
+  }
+
+
+  .about-container{
+    flex-direction: column;
+  }
 
 .footer .fbox-container .fbox{
   margin-right: 0;
