@@ -142,7 +142,7 @@ input::-webkit-inner-spin-button {
   font-weight: 500;
 }
 
-.showcase-area .btn-primary{
+.showcase-area .btn-primary {
   font-size: 1.2rem;
   padding: 15px 20px;
 }
@@ -166,7 +166,7 @@ input::-webkit-inner-spin-button {
 
 /* tables section */
 
-#tables{
+#tables {
   background-color: rgba(187, 187, 187, 0.115);
   padding: 3rem 0;
 }
@@ -207,7 +207,7 @@ td {
 
 /* ############## bookform ################## */
 
-#bookform{
+#bookform {
   margin: 8rem;
 }
 
@@ -219,7 +219,7 @@ td {
   padding: 25px;
 }
 
-#bookform form h1{
+#bookform form h1 {
   margin-bottom: 2rem;
   font-size: 2.4rem;
 }
@@ -248,10 +248,10 @@ td {
   align-items: center;
 }
 
-#bookform form .dates label{
+#bookform form .dates label {
   width: 20%;
 }
-#bookform form .dates input{
+#bookform form .dates input {
   width: 80%;
 }
 #bookform form .shiftname {
@@ -260,10 +260,10 @@ td {
   justify-content: space-between;
   align-items: center;
 }
-#bookform form .shiftname div:nth-child(1){
+#bookform form .shiftname div:nth-child(1) {
   width: 48%;
 }
-#bookform form .shiftname div:nth-child(2){
+#bookform form .shiftname div:nth-child(2) {
   width: 48%;
 }
 #bookform form .numemail {
@@ -273,10 +273,10 @@ td {
   align-items: center;
 }
 
-#bookform form .numemail div:nth-child(1){
+#bookform form .numemail div:nth-child(1) {
   width: 48%;
 }
-#bookform form .numemail div:nth-child(2){
+#bookform form .numemail div:nth-child(2) {
   width: 48%;
 }
 
@@ -291,15 +291,14 @@ td {
   margin: auto;
 }
 
-
 /* ############# booking instructions ############## */
 
-#bookinstructions{
+#bookinstructions {
   padding: 5rem 0;
   background-color: rgba(181, 181, 181, 0.116);
 }
 
-.Bookingintructions{
+.Bookingintructions {
   padding: 55px 15px 30px;
   background: #fafafa;
   border: 1px solid #c7c7c7;
@@ -331,10 +330,9 @@ td {
   margin-top: 10px;
 }
 
-.Bookingintructions li{
+.Bookingintructions li {
   margin-bottom: 14px;
 }
-
 
 /* float btn */
 
@@ -461,6 +459,74 @@ i {
   }
   .navbar input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
     transform: rotate(-40deg);
+  }
+
+  .main-title {
+    font-size: 3rem;
+    text-align: center;
+  }
+  .tables-container {
+    flex-direction: column;
+  }
+  .tables-container .jeep-safari {
+    width: 100%;
+  }
+  .tables-container h3 {
+    margin-top: 4rem;
+  }
+  .tables-container .canter-safari {
+    width: 100%;
+  }
+  #bookform {
+    margin: 8rem auto;
+  }
+
+  #bookform form {
+    width: 360px;
+  }
+  .Bookingintructions li {
+    margin-top: 30px;
+  }
+
+  .paymentform{
+    border-top: 2px solid rgba(0, 0, 0, 0.516);
+    flex-direction: column;
+  }
+
+  .paymentform div{
+    width: 80%;
+    margin:1rem auto ;
+  }
+  
+  #fields .paymentform div:nth-child(1) input{
+    width: 90%;
+  }
+  #fields .paymentform div:nth-child(2){
+    text-align: center;
+    width: 100%;
+  }
+
+  .paymentform:nth-child(3),
+  .paymentform:nth-child(4),
+  .paymentform:nth-child(5),
+  .paymentform:nth-child(6),
+  .paymentform:nth-child(7) {
+    display: none;
+  }
+
+  main ul{
+    flex-direction: column;
+  }
+
+  main .container li{
+    width: 100%;
+  }
+
+  #open-modal.modal-window > div{
+    width: 370px;
+  }
+  #open-modal2.modal-window > div{
+    width: 370px;
   }
 
   .footer {

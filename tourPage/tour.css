@@ -366,6 +366,34 @@ i {
     transform: rotate(-40deg);
   }
 
+  #hotels .hotels-container{
+    flex-direction: column;
+  }
+
+  main{
+    width: 100%;
+  }
+
+  aside{
+    width: 100%;
+  }
+
+  aside img{
+    height: 450px;
+    object-fit: cover;
+    object-position: left;
+  }
+
+  #hotels .Hcard{
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 5rem;
+  }
+
+  #hotels .Himg{
+    width: 100%;
+  }
+
   .footer {
     text-align: center;
   }

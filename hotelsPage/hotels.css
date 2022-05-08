@@ -645,6 +645,9 @@ i {
   #hotels .Hpricing{
     padding: 1.5rem;
   }
+  #open-modal2.modal-window > div{
+    width: 370px;
+  }
   .footer {
     text-align: center;
   }
