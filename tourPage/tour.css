@@ -90,6 +90,9 @@ input::-webkit-inner-spin-button {
   font-size: 2.8rem;
   order: 1;
 }
+.logo:hover {
+  color: rgb(7, 7, 7);
+}
 
 .navbar-container {
   display: flex;
@@ -267,6 +270,127 @@ i {
   transform: rotate(360deg);
 }
 
+
+/* ####################### footer ######################### */
+
+.footer{
+  background: rgba(231, 231, 231, 0.179);
+  padding: 50px;
+  padding-bottom:15px;
+  margin-top: 3rem;
+}
+
+.footer .fbox-container{
+  display: flex;
+  justify-content: center;
+}
+
+.footer .fbox-container .fbox{
+  margin-right: 8rem;
+}
+
+.footer .fbox-container .fbox:nth-child(1){
+    width: 40%;
+}
+
+.footer .fbox-container .fbox h3{
+  font-size: 2.5rem;
+  color:black;
+  padding:1rem 0;
+}
+
+.footer .fbox-container .fbox h3 i{
+  color:#0e6a7a;
+}
+
+.footer .fbox-container .fbox .links{
+  display: block;
+  font-size: 1.5rem;
+  color:gray;
+  padding:1rem 0;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.footer .fbox-container .fbox .links i{
+  color:#0e6a7a;
+  padding-right: .5rem;
+}
+
+.footer .fbox-container .fbox .links:hover{
+  font-size: 1.6rem;
+  text-decoration: underline;
+  color:rgb(79, 79, 79);
+}
+
+.footer .fbox-container .fbox .link:hover{
+  font-size: 1.5rem;
+  text-decoration: none;
+  color:gray;
+
+}
+
+.footer .fbox-container .fbox p{
+  line-height: 1.8;
+  font-size: 1.5rem;
+  color:gray;
+  padding:1rem 0;
+}
+
+.footer .fbox-container .fbox .share a{
+  height:4rem;
+  width:4rem;
+  line-height:4rem;
+  border-radius: .5rem;
+  font-size: 2rem;
+  color:black;
+  margin-right: .2rem;
+  background: #eee;
+  text-align: center;
+}
+
+.footer .fbox-container .fbox .share a:hover{
+  background: #0e6a7a;
+  color: #fff;
+}
+
+.footer .fbox-container .fbox .email{
+  width: 100%;
+  margin:.7rem 0;
+  padding:1rem;
+  border-radius: .5rem;
+  background: #eee;
+  font-size: 1.6rem;
+  color:black;
+  text-transform: none;
+}
+
+.footer .fbox-container .fbox .payment-img{
+  margin-top: 2rem;
+  height: 3rem;
+  display: block;
+}
+
+.footer .credit{
+  text-align: center;
+  margin-top: 2rem;
+  padding:1rem;
+  padding-top: 2.5rem;
+  font-size: 2rem;
+  color:black;
+  border-top: rgb(39, 39, 39);
+  background-color: rgba(210, 210, 210, 0.193);
+}
+
+.footer .credit span{
+  color:#0e6a7a;
+}
+
+
+
+
+
+
 /* ############# media queries ############### */
 
 @media (max-width: 768px) {
@@ -392,10 +516,6 @@ i {
 
   #hotels .Himg{
     width: 100%;
-  }
-
-  .footer {
-    text-align: center;
   }
 
   .footer .fbox-container .fbox {

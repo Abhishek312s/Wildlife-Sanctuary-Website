@@ -27,11 +27,11 @@ let hotelListing = document.querySelector(".moreHotels");
 
 function morePhotos() {
 
-  Gwrapper.innerHTML += `<div>
+  Gwrapper.innerHTML += `<div class="new-box">
   <img src="../imgs/gimg21.jpg"
       alt="" />
 </div>
-<div class="wide">
+<div class="wide new-box">
   <img src="../imgs/gimg22.jpg"
       alt="" />
 </div>
@@ -59,14 +59,14 @@ function morePhotos() {
   <img src="../imgs/gimg18.jpg"
   alt="" />
 </div>
-<div class="tall">
+<div class="tall" new-box>
   <img src="../imgs/gimg29.jpg"
   alt="" />
 </div>`
 }
 
 function moreHotels() {
-  hotelListing.innerHTML += `<div class="Hcard">
+  hotelListing.innerHTML += `<div class="Hcard new-box">
   <div class="Himg">
       <img src="../imgs/hotel2.jpg" alt="Manu Mahrani Resort">
   </div>
@@ -94,7 +94,7 @@ function moreHotels() {
       <p>Per Night + Taxes</p>
 
   </div>
-</div><div class="Hcard">
+</div><div class="Hcard new-box">
 <div class="Himg">
     <img src="../imgs/hotel4.jpg" alt="Manu Mahrani Resort">
 </div>
@@ -122,7 +122,7 @@ function moreHotels() {
     <p>Per Night + Taxes</p>
 
 </div>
-</div><div class="Hcard">
+</div><div class="Hcard new-box">
 <div class="Himg">
     <img src="../imgs/hotel3.jpg" alt="Manu Mahrani Resort">
 </div>
